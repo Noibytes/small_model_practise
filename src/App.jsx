@@ -12,7 +12,7 @@ function App() {
   const[course,setCourse]=useState("")
 
   useEffect(()=>{
-    axios.get("http://localhost:3000/students").then(response=>{dispatch(setStudents(response.data))})
+    axios.get("https://small-model-practise.onrender.com/students").then(response=>{dispatch(setStudents(response.data))})
     
   },[])
 
@@ -22,7 +22,7 @@ function App() {
       name:name,
       course:course
     }
-    axios.post("http://localhost:3000/students",student).then((response)=>
+    axios.post("https://small-model-practise.onrender.com/students",student).then((response)=>
       dispatch(setStudents([...students,response.data])))
     setId('')
     setName('')
@@ -30,7 +30,7 @@ function App() {
   }
 
   const delstudent=(id)=>{
-    axios.delete(`http://localhost:3000/students/${id}`).then(()=>dispatch(setStudents(students.filter(stu=>stu.id!=id))))
+    axios.delete(`https://small-model-practise.onrender.com/students/${id}`).then(()=>dispatch(setStudents(students.filter(stu=>stu.id!=id))))
 
   }
 
@@ -48,7 +48,7 @@ function App() {
       course:course
     }
 
-    axios.put(`http://localhost:3000/students/${id}`,updatedstudent).then((response)=>dispatch(setStudents(students.map(st=>st.id==id? response.data:st))))
+    axios.put(`https://small-model-practise.onrender.com/students/${id}`,updatedstudent).then((response)=>dispatch(setStudents(students.map(st=>st.id==id? response.data:st))))
 
   }
 
