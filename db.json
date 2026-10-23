@@ -1,0 +1,24 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Pranoi P",
+      "course": "Mern stack developer"
+    },
+    {
+      "id": "2",
+      "name": "pranav",
+      "course": "web"
+    },
+    {
+      "id": "3",
+      "name": "meenu",
+      "course": "web"
+    },
+    {
+      "id": "4",
+      "name": "naveen",
+      "course": "design"
+    }
+  ]
+}
